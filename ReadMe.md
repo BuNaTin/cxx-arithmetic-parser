@@ -1,7 +1,7 @@
 
 	Simple arithmetic parser
 
-#Table of contents:
+	#Table of contents:
 (1): Motivation
 (2): Principle of operation
 (3): Small info
@@ -25,16 +25,19 @@ Expression class is only a safe wrapper over other classes.
 Factory class is nice dot to recognize how arithmetical tree is building:
 Parser tries to find the lower operation and Factory make from it new Operation leaf:
 from:
-2+3/5
+
+	2+3/5
 
 first find +:
- +
-2 3/5
+
+	 +
+	2 3/5
 
 second find /:
- +
-2  /
-  3 5
+
+	 +
+	2  /
+	  3 5
 
 and then get answer by recursive method Calc().
 
