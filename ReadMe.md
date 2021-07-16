@@ -36,9 +36,10 @@ sin, cos, tan, sqrt. That is really small list of operations, but adding them is
 All classes are non-copy before I see how the fate of the project will develop.
 
 ## 4. Syntactic conventions: ##
-unique_ptr type has mark: name_up;
-iterator_ type has mark: name_iter;
+`unique_ptr type has mark: name_up;`
+`iterator_ type has mark: name_iter;`
 
 ## 5. Users methods: ##
-class Expression had only 1 constructor from a string (yet), 
-and 1 method - Calc() returning double.
+Class Expression had only 1 constructor from a string (yet), 
+and 1 method: 
+`double Calc();`
