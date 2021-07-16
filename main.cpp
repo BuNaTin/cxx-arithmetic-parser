@@ -1,12 +1,16 @@
 
 #include "source/Expression/Expression.h"
+
+#include <string>
 #include <iostream>
 
+
+// Test file
 int main() {
-	std::cout<<"Input:";
-	std::string alfa;
-	getline(std::cin,alfa);
-	Expression expr(alfa);
-	std::cout<<"Output:"<<expr.Calc()<<'\n';
+    std::cout<<"Input: ";
+    std::string buffer;
+    getline(std::cin,buffer);
+    Expression alfa(buffer);
+    std::cout<<"Output: "<<alfa.Calc()<<'\n';
 	return 0;
 }

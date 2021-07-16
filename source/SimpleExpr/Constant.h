@@ -6,19 +6,27 @@
 // For interface
 #include "virtualExpr.h"
 
+/*
+    Copyable class Constant.
+    Makes double value from string or double and safe him.
+
+*/
 class Constant : public virtualExpr {
 public:
-	Constant();
-	Constant(double res);
-	Constant(const std::string&);
-	~Constant();
+// Initializing methods + constructors
+    Constant();
+    Constant(double res);
+    Constant(const std::string&);
+    Constant(const Constant& other);
+    ~Constant();
 public:
-	double Calc() const override;
-	bool BuildSuccessfully() const override;
+// API methods
+    double Calc() const override;
+    bool BuildSuccessfully() const override;
 public:
-	Constant(const Constant& other) = delete;
-	Constant& operator=(const Constant& other) = delete;
+// Copyable
+    Constant& operator=(const Constant& other);
 private:
-	double _result;
-	bool _buildSuccessfully;
+    double _result;
+    bool _buildSuccessfully;
 };

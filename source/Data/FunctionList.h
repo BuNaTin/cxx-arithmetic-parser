@@ -3,11 +3,17 @@
 
 #include <map>
 #include <initializer_list>
-
+    
+/* 
+    class FunctionList is singleton look like microservice with all static members.
+    To add new operations use FunctionList.cpp
+*/
 class FunctionList {
 public:
+    // for GetFunction() method
 	double (*ForDeclType)(double);
 public:
+// API methods
 	static auto GetFunction( std::string func_name)
 							-> decltype( ForDeclType ) {
 		return _data[ func_name ];

@@ -18,6 +18,5 @@ Expression::Expression(const std::string& buffer)
 }
 
 double Expression::Calc() const {
-	
 	return _result;
 }

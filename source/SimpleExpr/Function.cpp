@@ -9,31 +9,31 @@
 #include "../Parser/Parser.h"
 
 Function::Function() {
-	
+    
 }
 Function::~Function() {
-	
+    
 }
 
 Function::Function(const std::string& buffer) {
-	_buildSuccessfully = true;
-	_name = Parser::GetFuncName(buffer);
-	_body_up = Factory::MakeExpr( Parser::GetFuncBody(buffer) );
-	if(_name == "" or _body_up == nullptr) {
-		_buildSuccessfully = false;
-	}
+    _buildSuccessfully = true;
+    _name = Parser::GetFuncName(buffer);
+    _body_up = Factory::MakeExpr( Parser::GetFuncBody(buffer) );
+    if(_name == "" or _body_up == nullptr) {
+        _buildSuccessfully = false;
+    }
 }
 
 double Function::Calc() const {
-	if(not _buildSuccessfully) {
-		std::cerr<<"Calc() for unsuccess build function\n";
-	}
-	auto func = FunctionList::GetFunction(_name);
-	return func( _body_up->Calc() );
+    if(not _buildSuccessfully) {
+        std::cerr<<"Calc() for unsuccess build function\n";
+    }
+    auto func = FunctionList::GetFunction(_name);
+    return func( _body_up->Calc() );
 }
 
 bool Function::BuildSuccessfully() const {
-	return (_buildSuccessfully and 
-			_body_up->BuildSuccessfully()
-	);
+    return (_buildSuccessfully and 
+            _body_up->BuildSuccessfully()
+    );
 }
