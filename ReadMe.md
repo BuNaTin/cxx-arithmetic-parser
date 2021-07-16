@@ -43,3 +43,6 @@ All classes are non-copy before I see how the fate of the project will develop.
 Class Expression had only 1 constructor from a string (yet), 
 and 1 method: 
 `double Calc();`
+
+## 6. Coming changes: ##
+I will remake Function class so that you can add functions with more than 1 argument.
