@@ -13,6 +13,7 @@
 This tiny and minor project is a training model.
 Writing this project I wanted to practice modern cxx, nothing more.
 I think this realization is very simple and easy to understand.
+
 2. ##### Principle of operation: #####
 I try to do Expression look like the built-in type,
 so it works quite safe (but not fast yet).
