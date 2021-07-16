@@ -27,7 +27,7 @@ from:
     2+3/5
 firstly, it finds +:
 
-	 +
+	  +
 	 2 3/5
 secondly, it finds /:
 
