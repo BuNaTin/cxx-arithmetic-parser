@@ -1,0 +1,11 @@
+﻿  Building Custom Rule C:/Users/Desmart/Documents/my games/projects/cxx-arithmetic-parser/CMakeLists.txt
+  Parser.cpp
+C:\Users\Desmart\Documents\my games\projects\cxx-arithmetic-parser\source\Parser\Parser.cpp(41,31): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "and"
+C:\Users\Desmart\Documents\my games\projects\cxx-arithmetic-parser\source\Parser\Parser.cpp(41,66): error C2143: синтаксическая ошибка: отсутствие ";" перед "{"
+C:\Users\Desmart\Documents\my games\projects\cxx-arithmetic-parser\source\Parser\Parser.cpp(52,38): error C2146: синтаксическая ошибка: отсутствие ")" перед идентификатором "and"
+C:\Users\Desmart\Documents\my games\projects\cxx-arithmetic-parser\source\Parser\Parser.cpp(52,38): error C2065: and: необъявленный идентификатор
+C:\Users\Desmart\Documents\my games\projects\cxx-arithmetic-parser\source\Parser\Parser.cpp(52,42): error C2146: синтаксическая ошибка: отсутствие ";" перед идентификатором "symb_iter"
+C:\Users\Desmart\Documents\my games\projects\cxx-arithmetic-parser\source\Parser\Parser.cpp(52,70): error C2059: синтаксическая ошибка: )
+C:\Users\Desmart\Documents\my games\projects\cxx-arithmetic-parser\source\Parser\Parser.cpp(53,26): error C2059: синтаксическая ошибка: ;
+C:\Users\Desmart\Documents\my games\projects\cxx-arithmetic-parser\source\Parser\Parser.cpp(56,52): error C2447: {: отсутствует заголовок функции (возможно, используется формальный список старого типа)
+C:\Users\Desmart\Documents\my games\projects\cxx-arithmetic-parser\source\Parser\Parser.cpp(184,1): fatal error C1004: непредвиденное обнаружение конца файла

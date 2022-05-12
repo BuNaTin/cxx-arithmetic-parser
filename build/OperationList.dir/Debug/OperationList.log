@@ -1,0 +1,4 @@
+﻿  Building Custom Rule C:/Users/Desmart/Documents/my games/projects/cxx-arithmetic-parser/CMakeLists.txt
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppCommon.targets(241,5): warning MSB8065: настраиваемая сборка для элемента "C:\Users\Desmart\Documents\my games\projects\cxx-arithmetic-parser\CMakeLists.txt" успешно выполнена, но указанные выходные данные "c:\users\desmart\documents\my games\projects\cxx-arithmetic-parser\build\cmakefiles\generate.stamp" не созданы. Это может привести к неправильной работе инкрементной сборки.
+  OperationList.cpp
+  OperationList.vcxproj -> C:\Users\Desmart\Documents\my games\projects\cxx-arithmetic-parser\build\Debug\OperationList.lib
