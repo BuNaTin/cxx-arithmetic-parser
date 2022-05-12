@@ -9,7 +9,7 @@
 Expression::Expression(const std::string& buffer)
 {
 	_rep_up = Factory::MakeExpr(buffer);
-	if( _rep_up == nullptr or not _rep_up->BuildSuccessfully() ) {
+	if( _rep_up == nullptr || !_rep_up->BuildSuccessfully() ) {
 		std::cerr<<"Wrong expression\n";
 		_result = 0.0;
 	} else {

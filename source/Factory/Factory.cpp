@@ -20,8 +20,6 @@ auto Factory::MakeExpr(const std::string& buffer)
     if(Parser::HadConstant(buffer)) {
         return std::make_unique<Constant>(buffer);
     }
-    // Couldn't find current expression in buffer
-    // Can use this for log
-    // std::cerr<<"Error Expr:"<<buffer<<'\n'; 
+    std::cerr<<"Error Expr:"<<buffer<<'\n'; 
     return nullptr;
 }

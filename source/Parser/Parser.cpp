@@ -49,7 +49,7 @@ bool Parser::HadFunction(const std::string& buffer) {
     std::string newbuffer = ClearGarbage(buffer);
     auto symb_iter = newbuffer.begin();
     std::string _name;
-    while(*symb_iter != _openBracket and symb_iter != newbuffer.end()) {
+    while(symb_iter != newbuffer.end() && *symb_iter != _openBracket) {
         _name+=*symb_iter;
         ++symb_iter;
     }
@@ -107,7 +107,7 @@ auto Parser::FindLowerOperation(const std::string& buffer)
         ans_iter = FindOneOfList(buffer, OperationList::GetOperations(operationLvl));
         ++operationLvl;
     }
-    if( ans_iter == zero_iter ) {
+    if(ans_iter == zero_iter ) {
         std::cerr<<"Couldn't find operation: "<<buffer<<'\n';
     }
     return ans_iter;
@@ -159,9 +159,10 @@ auto Parser::FindOneOfList(const std::string& buffer,
                 const std::initializer_list<char>& operations) 
                 -> decltype( buffer.end() ){
     //   last symbol
-    auto symb_iter = --( buffer.end() );
+    auto symb_iter = buffer.end();
+    --symb_iter;
     int bracketsCnt = 0;
-    while( symb_iter != --buffer.begin() ) {
+    while( symb_iter != buffer.begin() ) {
         // to stay bracketsCnt current
         if( *symb_iter == _openBracket )
             ++bracketsCnt;
@@ -175,8 +176,14 @@ auto Parser::FindOneOfList(const std::string& buffer,
                 }
             }
         }
-
         --symb_iter;
+    }
+    if (bracketsCnt == 0) {
+        for (auto operation : operations) {
+            if (*symb_iter == operation) {
+                return symb_iter;
+            }
+        }
     }
     // If couldn't find
     return buffer.end();

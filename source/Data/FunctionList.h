@@ -3,6 +3,7 @@
 
 #include <map>
 #include <initializer_list>
+#include <string>
     
 /* 
     class FunctionList is singleton look like microservice with all static members.
