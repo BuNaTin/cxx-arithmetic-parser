@@ -6,17 +6,21 @@
 // For realisation
 #include "../Factory/Factory.h"
 
-Expression::Expression(const std::string& buffer)
+Expression::Expression(const std::string &buffer)
 {
 	_rep_up = Factory::MakeExpr(buffer);
-	if( _rep_up == nullptr || !_rep_up->BuildSuccessfully() ) {
-		std::cerr<<"Wrong expression\n";
+	if (_rep_up == nullptr || !_rep_up->BuildSuccessfully())
+	{
+		valid = false;
 		_result = 0.0;
-	} else {
+	}
+	else
+	{
 		_result = _rep_up->Calc();
 	}
 }
 
-double Expression::Calc() const {
-	return _result;
+std::pair<double, bool> Expression::Calc() const
+{
+	return {_result, valid};
 }

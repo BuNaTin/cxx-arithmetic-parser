@@ -1,16 +1,21 @@
 
 #include "source/Expression/Expression.h"
 
+#include "gui/mainwindow.h"
+#include <QApplication>
+
 #include <string>
 #include <iostream>
 
-
 // Test file
-int main() {
-    std::cout<<"Input: ";
-    std::string buffer;
-    getline(std::cin,buffer);
-    Expression alfa(buffer);
-    std::cout<<"Output: "<<alfa.Calc()<<'\n';
-	return 0;
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
+
+    MainWindow window;
+
+    window.show();
+
+    return a.exec();
+    return 0;
 }
