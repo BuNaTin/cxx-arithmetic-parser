@@ -12,6 +12,7 @@
 auto Factory::MakeExpr(const std::string &buffer)
     -> decltype(std::unique_ptr<virtualExpr>(nullptr))
 {
+    std::cout << "Try to make expr: " << buffer << '\n';
     if (Parser::HadOperation(buffer))
     {
         return std::make_unique<Operation>(buffer);

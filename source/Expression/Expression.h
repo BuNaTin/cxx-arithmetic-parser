@@ -24,6 +24,9 @@ public:
 	Expression &operator=(const Expression &other) = delete;
 
 private:
+	bool checkBrackets(const std::string &);
+
+private:
 	bool valid = true;
 	double _result;
 	std::unique_ptr<virtualExpr> _rep_up;
